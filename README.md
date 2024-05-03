@@ -20,6 +20,8 @@ Create a system that can handle a lot of trade orders at once, coming from diffe
 
 ## Requirements:
 
+### You can use a JSON object(s) for DB without needing any real DB.
+
 1. **Order Intake**: Implement a component that can receive trade orders from different sources (e.g., trading platforms, brokers, mobile apps). This component should be able to handle multiple orders coming in simultaneously.
 
 2. **Client Profiles**: Implement a component that stores and manages profiles for the institution's clients. These profiles should contain information like the client's name, contact details, account balance, and trading preferences.
@@ -36,7 +38,6 @@ Create a system that can handle a lot of trade orders at once, coming from diffe
 2. Source code for all components, including order intake, client profiles, asset catalog, order processing, and distributed architecture.
 3. Instructions on how to set up and run your solution, including any required dependencies or configurations.
 4. Example usage scenarios demonstrating the key features of your real-time trading system.
-5. You can use a JSON object for DB no need to use any real DB.
 
 ## Evaluation Criteria:
 
