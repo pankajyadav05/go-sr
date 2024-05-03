@@ -36,7 +36,8 @@ Create a system that can handle a lot of trade orders at once, coming from diffe
 2. Source code for all components, including order intake, client profiles, asset catalog, order processing, and distributed architecture.
 3. Instructions on how to set up and run your solution, including any required dependencies or configurations.
 4. Example usage scenarios demonstrating the key features of your real-time trading system.
+5. You can use a JSON object for DB no need to use any real DB.
 
-**Evaluation Criteria:**
+## Evaluation Criteria:
 
 Check full details about Evaluation criteria here [marks.md](MARKS.md)
