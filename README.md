@@ -16,7 +16,7 @@
 
 # Assignment: Golang Distributed Real-time Trading System
 
-Create a system that can handle a lot of trade orders at once, coming from different places, and process them quickly.
+Create a system in Golang that can handle a lot of trade orders at once, coming from different places, and process them quickly.
 
 ## Requirements:
 
