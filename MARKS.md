@@ -1,4 +1,4 @@
-# Distributed Real-time Trading System
+# Golang Distributed Real-time Trading System
 
 ## Evaluation Rubric
 
