@@ -22,6 +22,8 @@ Create a system in Golang that can handle a lot of trade orders at once, coming 
 
 $${\color{red}You can use a JSON object(s) for DB without needing any real DB}$$
 
+<span style="color:orange;">Word up</span>
+
 1. **Order Intake & Processing**:
 
    - [dummy data] Store clients profiles in DB. Profiles should contain information like the client's name, contact details, account balance, owned asstes etc.
