@@ -14,9 +14,8 @@
 
 ### Distributed Architecture (30 marks)
 
-- Effective splitting of order processing workload across multiple nodes (10 marks)
-- Clear communication and coordination between distributed components (10 marks)
-- Handling of potential race conditions and consistency issues (5 marks)
+- Effective splitting of order processing workload across multiple nodes (15 marks)
+- Clear communication and coordination between distributed components (15 marks)
 
 ### Code Quality (20 marks)
 
