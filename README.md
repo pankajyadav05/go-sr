@@ -21,7 +21,7 @@ Create a system in Golang that can handle a lot of trade orders at once, coming 
 ## Requirements:
 
 ```diff
-You can use a JSON object(s) for DB without needing any real DB
+-- You can use a JSON object(s) for DB without needing any real DB
 ```
 
 
