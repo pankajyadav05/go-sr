@@ -14,9 +14,6 @@
 
 ### Distributed Architecture (30 marks)
 
-- Effective splitting of order processing workload across multiple nodes (15 marks)
-- Clear communication and coordination between distributed components (15 marks)
-
 ### Code Quality (20 marks)
 
 - Well-structured and modular code (Adherence to best practices and coding conventions) (10 marks)
