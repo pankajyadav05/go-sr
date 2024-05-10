@@ -31,7 +31,7 @@ Create a system in Golang that can handle a lot of trade orders at once, coming 
    - [dummy data] Store catalog of assets (e.g., stocks, bonds, currencies) in DB. This catalog should contain details about each asset, such as name, description, current price, total available count etc.
    - API that can receive trade orders and processes them (one trade order should include clienId, Asset being traded, Volume etc.). This involves checking the client's profile, verifying the assets being traded, updating the client's account balance, upating asset's available count and other edge cases.
 
-2. **Distributed Architecture**: Design and implement a distributed architecture for processing trade orders. Split the order processing workload across multiple nodes (servers) based on a suitable strategy (e.g., asset classes, client groups, or geographical regions).
+2. **Distributed Architecture**: Design and implement a distributed architecture for processing trade orders. Split the order processing workload across multiple services based on a suitable strategy (e.g. If our order can either be of type **Stock** or **Bond**. If it's Stock then it's processed by Service A, if bond then by Service B).
 
 3. **Documentation**: A README file explaining the design and implementation of your distributed real-time trading system, including any assumptions and limitations.
 
