@@ -14,7 +14,7 @@
 
 ---
 
-## Assignment: Golang Order Intake & Processing API
+# Assignment: Golang Order Intake & Processing API
 
 The API should be able to handle trade orders. A trade order should contain the following information:
 
