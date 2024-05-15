@@ -16,7 +16,7 @@
 
 # Assignment: Golang Order Intake & Processing API
 
-The API should be able to handle trade orders. A trade order should contain the following information:
+The API should be able to handle trade orders. A trade order should contain the following information (Define the structs to represent the data structures before starting):
 
 1. `clientId`: The ID of the client who is placing the order.
 2. `assetId`: The ID of the stock being traded.
