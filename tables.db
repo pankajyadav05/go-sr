@@ -1,0 +1,25 @@
+-- Table for clients
+CREATE TABLE clients (
+    client_id SERIAL PRIMARY KEY,
+    client_name VARCHAR(255) NOT NULL,
+    contact_details VARCHAR(255),
+    account_balance DECIMAL(18,2)
+);
+
+-- Table for owned assets
+CREATE TABLE owned_assets (
+    id SERIAL PRIMARY KEY,
+    client_id INT NOT NULL REFERENCES clients(client_id),
+    asset_id INT NOT NULL,
+    asset_count INT NOT NULL,
+    UNIQUE (client_id, asset_id)
+);
+
+-- Table for asset catalog
+CREATE TABLE asset_catalog (
+    asset_id SERIAL PRIMARY KEY,
+    asset_name VARCHAR(255) NOT NULL,
+    asset_description TEXT,
+    current_price DECIMAL(18,2),
+    total_available_count INT
+);

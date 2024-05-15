@@ -18,32 +18,44 @@
 
 Create a system in Golang that can handle a lot of trade orders at once, coming from different places, and process them quickly.
 
-## Requirements:
+## Requirements: Order Intake & Processing API
 
-```diff
--- You can use a JSON object(s) for DB without needing any real DB
+The API should be able to handle trade orders. A trade order should contain the following information:
+
+1. `clientId`: The ID of the client who is placing the order.
+2. `assetId`: The ID of the stock being traded.
+3. `volume`: The number of units shares to be traded.
+4. `orderType`: The type of order, either **"BUY"** or **"SELL"**.
+
+When a trade order is received, the API should:
+
+1. Verify that the client exists and has a valid account balance.
+2. Verify that the asset exists in the asset catalog.
+3. If the order type is **"BUY"**:
+   - Check if the client has enough funds to complete the purchase.
+   - Deduct the total cost from the client's account balance.
+   - Update the owned assets table to reflect the new asset ownership.
+   - Update the total available count of the asset in the asset catalog.
+4. If the order type is **"SELL"**:
+   - Check if the client owns enough units of the asset to complete the sale.
+   - Add the total sale amount to the client's account balance.
+   - Update the owned assets table to reflect the new asset ownership.
+   - Update the total available count of the asset in the asset catalog.
+
+## Dummy JSON Payload:
+
+```json
+{
+  "clientId": 1,
+  "assetId": 2,
+  "volume": 25,
+  "orderType": "BUY"
+}
 ```
 
+In this example payload:
 
-1. **Order Intake & Processing**:
-
-   - [dummy data] Store clients profiles in DB. Profiles should contain information like the client's name, contact details, account balance, owned asstes etc.
-   - [dummy data] Store catalog of assets (e.g., stocks, bonds, currencies) in DB. This catalog should contain details about each asset, such as name, description, current price, total available count etc.
-   - API that can receive trade orders and processes them (one trade order should include clienId, Asset being traded, Volume etc.). This involves checking the client's profile, verifying the assets being traded, updating the client's account balance, upating asset's available count and other edge cases.
-
-2. **Distributed Architecture**: Design and implement a distributed architecture for processing trade orders. Split the order processing workload across multiple services based on a suitable strategy (e.g. If our order can either be of type **Stock** or **Bond**. If it's Stock then it's processed by Service A, if bond then by Service B).
-
-3. **Documentation**: A README file explaining the design and implementation of your distributed real-time trading system, including any assumptions and limitations.
-
-## Submission:
-
-Once you've completed the assignment, please submit your work by providing:
-
-1. Provide the GitHub repository URL as a PRIVATE Git repository (also provide access) to pankaj@gitforcetalent.com and cc prithvi@gitforcetalent.com, harika@gitforcetalent.com.
-2. Source code for all components, including order intake, client profiles, asset catalog, order processing, and distributed architecture.
-3. Instructions on how to set up and run your solution, including any required dependencies or configurations.
-4. Provide any additional notes or considerations regarding the implementation.
-
-## Evaluation Criteria:
-
-Check full details about Evaluation criteria here [marks.md](MARKS.md)
+- The client with ID 1 (John Doe) is placing an order to buy 25 units (shares) of the asset with ID 2 (Tesla Inc.).
+- The API should verify that John Doe exists, has enough funds in his account balance, and then proceed with the purchase.
+- After the purchase, John Doe's account balance should be updated, and the owned assets table should reflect that he now owns 75 shares of Tesla Inc. (assuming he previously owned 50 shares).
+- The total available count of Tesla Inc. in the asset catalog should be reduced by 25.
