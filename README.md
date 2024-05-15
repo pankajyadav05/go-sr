@@ -14,11 +14,7 @@
 
 ---
 
-# Assignment: Golang Distributed Real-time Trading System
-
-Create a system in Golang that can handle a lot of trade orders at once, coming from different places, and process them quickly.
-
-## Requirements: Order Intake & Processing API
+## Assignment: Golang Order Intake & Processing API
 
 The API should be able to handle trade orders. A trade order should contain the following information:
 
