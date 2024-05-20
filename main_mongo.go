@@ -29,7 +29,7 @@ func main() {
     fmt.Println("Connected to MongoDB!")
 
     // Get a handle for your collection
-    collection := client.Database("tazapay-go").Collection("clients")
+    collection := client.Database("tazapay_go").Collection("clients")
 
     // Insert a document
     insertResult, err := collection.InsertOne(context.TODO(), bson.D{

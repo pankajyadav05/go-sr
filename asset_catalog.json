@@ -1,0 +1,23 @@
+[
+  {
+    "asset_id": 1,
+    "asset_name": "Apple Inc.",
+    "asset_description": "Technology company",
+    "current_price": 125.5,
+    "total_available_count": 1000000
+  },
+  {
+    "asset_id": 2,
+    "asset_name": "Tesla Inc.",
+    "asset_description": "Electric vehicle and clean energy company",
+    "current_price": 650.75,
+    "total_available_count": 500000
+  },
+  {
+    "asset_id": 3,
+    "asset_name": "Amazon.com Inc.",
+    "asset_description": "E-commerce and cloud energy company",
+    "current_price": 3250.0,
+    "total_available_count": 200000
+  }
+]

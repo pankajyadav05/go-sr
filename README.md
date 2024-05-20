@@ -18,10 +18,10 @@
 
 The API should be able to handle trade orders. A trade order should contain the following information (Define the structs to represent the data structures before starting):
 
-1. `clientId`: The ID of the client who is placing the order.
-2. `assetId`: The ID of the stock being traded.
+1. `client_id`: The ID of the client who is placing the order.
+2. `asset_id`: The ID of the stock being traded.
 3. `volume`: The number of units shares to be traded.
-4. `orderType`: The type of order, either **"BUY"** or **"SELL"**.
+4. `order_type`: The type of order, either **"BUY"** or **"SELL"**.
 
 When a trade order is received, the API should:
 
@@ -42,10 +42,10 @@ When a trade order is received, the API should:
 
 ```json
 {
-  "clientId": 1,
-  "assetId": 2,
+  "client_id": 1,
+  "asset_id": 2,
   "volume": 25,
-  "orderType": "BUY"
+  "order_type": "BUY"
 }
 ```
 

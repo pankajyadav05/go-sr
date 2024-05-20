@@ -1,42 +1,20 @@
 [
   {
-    "clientId": 1,
-    "clientName": "John Doe",
-    "contactDetails": "john.doe@example.com",
-    "accountBalance": 10000.0,
-    "ownedAssets": [
-      {
-        "assetId": 1,
-        "assetCount": 100
-      },
-      {
-        "assetId": 2,
-        "assetCount": 50
-      }
-    ]
+    "client_id": 1,
+    "client_name": "John Doe",
+    "contact_details": "john.doe@example.com",
+    "account_balance": 10000.0
   },
   {
-    "clientId": 2,
-    "clientName": "Jane Smith",
-    "contactDetails": "jane.smith@example.com",
-    "accountBalance": 15000.0,
-    "ownedAssets": [
-      {
-        "assetId": 1,
-        "assetCount": 200
-      }
-    ]
+    "client_id": 2,
+    "client_name": "Jane Smith",
+    "contact_details": "jane.smith@example.com",
+    "account_balance": 15000.0
   },
   {
-    "clientId": 3,
-    "clientName": "Bob Johnson",
-    "contactDetails": "bob.johnson@example.com",
-    "accountBalance": 20000.0,
-    "ownedAssets": [
-      {
-        "assetId": 3,
-        "assetCount": 25
-      }
-    ]
+    "client_id": 3,
+    "client_name": "Bob Johnson",
+    "contact_details": "bob.johnson@example.com",
+    "account_balance": 20000.0
   }
 ]
