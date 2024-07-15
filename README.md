@@ -21,22 +21,15 @@ The API should be able to handle trade orders. A trade order should contain the 
 1. `client_id`: The ID of the client who is placing the order.
 2. `asset_id`: The ID of the stock being traded.
 3. `volume`: The number of units shares to be traded.
-4. `order_type`: The type of order, either **"BUY"** or **"SELL"**.
 
 When a trade order is received, the API should:
 
 1. Verify that the client exists and has a valid account balance.
 2. Verify that the asset exists in the asset catalog.
-3. If the order type is **"BUY"**:
-   - Check if the client has enough funds to complete the purchase.
-   - Deduct the total cost from the client's account balance.
-   - Update the owned assets table to reflect the new asset ownership.
-   - Update the total available count of the asset in the asset catalog.
-4. If the order type is **"SELL"**:
-   - Check if the client owns enough units of the asset to complete the sale.
-   - Add the total sale amount to the client's account balance.
-   - Update the owned assets table to reflect the new asset ownership.
-   - Update the total available count of the asset in the asset catalog.
+3. Check if the client has enough funds to complete the purchase.
+4. Deduct the total cost from the client's account balance.
+5. Update the owned assets table to reflect the new asset ownership.
+6. Update the total available count of the asset in the asset catalog.
 
 ## Dummy JSON Payload:
 
@@ -44,8 +37,7 @@ When a trade order is received, the API should:
 {
   "client_id": 1,
   "asset_id": 2,
-  "volume": 25,
-  "order_type": "BUY"
+  "volume": 25
 }
 ```
 
